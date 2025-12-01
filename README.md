@@ -1,26 +1,98 @@
+# 🛒 Selenium E-Commerce Automation (Java + TestNG)
 
-# selenium-ecommerce
+A complete automation framework built using **Selenium WebDriver**, **Java**, **Maven**, and **TestNG** to test an e-commerce workflow on the **SauceDemo** demo website.
 
-Selenium + Java + TestNG example automation project for an e-commerce flow using the **SauceDemo** demo site (https://www.saucedemo.com/).
+---
 
-## What is included
-- Maven-based Java project
-- Page Object Model (POM) implementation
-- TestNG tests (login, add to cart, checkout)
-- WebDriverManager usage (automatic driver management)
-- `testng.xml` to run suites
+## 🚀 Features Included
 
-## How to run
-1. Install Java 11+ and Maven.
-2. Clone repo and run:
-```bash
-mvn clean test
+* ✔️ **Maven-based Java project**
+* ✔️ **Page Object Model (POM)** for clean code structure
+* ✔️ TestNG test cases for:
+
+  * Login
+  * Add to Cart
+  * Checkout
+* ✔️ **WebDriverManager** for automatic browser driver handling
+* ✔️ **testng.xml** to run complete suites
+* ✔️ Headless execution support
+
+---
+
+## 📁 Project Structure
+
 ```
-To run headless, pass a system property:
-```bash
-mvn clean test -Dheadless=true
+src
+ └── main/java
+ └── test/java
+     ├── pages      # Page Object Model classes
+     ├── tests      # Test scripts
+     └── utils      # Helper methods
 ```
 
-## Demo site
-We use https://www.saucedemo.com/ as the target demo site. Use the sample credentials on that site (standard_user / secret_sauce).
+---
 
+## 🛠️ How to Run the Project
+
+### **1. Clone the repository**
+
+```
+git clone https://github.com/ymanisha009/selenium-ecommerce-automation.git
+```
+
+### **2. Install dependencies**
+
+Run inside the project folder:
+
+```
+mvn clean install
+```
+
+### **3. Execute the TestNG suite**
+
+```
+mvn test
+```
+
+### **Run in headless mode (optional)**
+
+```
+mvn test -Dheadless=true
+```
+
+---
+
+## 🧪 Demo Website Used
+
+This project uses the public demo site **SauceDemo** for testing:
+🔗 [https://www.saucedemo.com/](https://www.saucedemo.com/)
+
+Use default test credentials:
+
+* **Username:** standard_user
+* **Password:** secret_sauce
+
+---
+
+## 📸 Sample Test Flow
+
+* Launch browser
+* Login to site
+* Add product to cart
+* Proceed to checkout
+* Complete purchase
+* Validate success message
+
+---
+
+## 🤝 Contribution Guidelines
+
+Pull requests are welcome. For major changes, please open an issue first.
+
+---
+
+## 📄 License
+
+This project is open-source and free to use.
+
+---
