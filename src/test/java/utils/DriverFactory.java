@@ -21,12 +21,14 @@ public class DriverFactory {
 
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--start-maximized");
-            if (headless) {
-                options.addArguments("--headless=new");
-                options.addArguments("--window-size=1920,1080");
-            }
-            return new ChromeDriver(options);
+            options.addArguments("--remote-allow-origins=*");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--headless=new");   // IMPORTANT FOR GITHUB ACTIONS
+
+return new ChromeDriver(options);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
